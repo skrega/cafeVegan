@@ -111,7 +111,7 @@
     font-size: 40px;
     text-align: center;
     font-weight: 300;
-    line-height: 35px;
+    line-height: 41px;
 }
 .special__line{
     margin-top: 22px;
@@ -139,6 +139,8 @@
 .special__dish-box{
     text-align: center;
     height: 248px;
+    max-width: 310px;
+    width: 100%;
 }
 .special__dish-img{
     max-width: 248px;
@@ -154,9 +156,10 @@
 .special__dish-title {
     font-weight: 700;
     border-bottom: 1px solid #383838;
-    padding: 70px 0px 18px;
-    margin-right: 60px;
-    margin-left: 60px;
+    padding: 50px 0px 18px;
+    max-width: 190px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .special__dish-text {
@@ -263,11 +266,26 @@
         }
     }
 }
+.tab_content{
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+.tab-item{
+    display: none;
+    &.active-tab{
+        display: flex;
+    }
+}
 .tab-items__box{
     margin-bottom: 40px;
 }
 .tab__list-title{
     font-weight: 300;
+    max-width: 450px;
+    width: 100%;
+    text-transform: uppercase;
     span{
         font-weight: 400;
         margin-left: 20px;
@@ -402,9 +420,8 @@
             text-align: center;
             border-bottom: 1px solid #3c3c3c;
             margin-right: 0;
-            & + li {
-                padding-top: 15px;
-            }
+            // padding-top: 10px;
+            
             &:hover{
                 background-color: #eff0f0;
             }
@@ -532,18 +549,21 @@
         display: block;
     }
     .special__dish-box{
-        height: 170px;
+        height: 150px;
+        max-width: 100%;
     }
     .special__dish-img{
         margin: 0 auto;
     }
     .special__dish-title{
-        margin-right: 30px;
-        margin-left: 30px;
-        padding-top: 30px;
+        max-width: 100%;
+        padding-top: 20px;
     }
     .special__dish-text{
         padding: 8px 14px;
+    }
+    .special__dish-price{
+        padding-bottom: 10px;
     }
     .tab-items__list{
         max-width: 400px;
@@ -551,6 +571,12 @@
     }
     .tab-items__box{
         margin-bottom: 20px;
+    }
+    .tab__list-title{
+        max-width: 297px;
+        span{
+            margin-left: 4px;
+        }
     }
         
 }
@@ -571,6 +597,9 @@
     }
     .footer__wrapper{
         padding-bottom: 50px;
+    }
+    .special__dish-box{
+        height: 172px;
     }
     
 }
